@@ -6,4 +6,4 @@ I've never used HTML, CSS or JavaScript before (or even created anything with a 
 
 If you want to run this on your own machine, just know CORS will prevent the JSON file from being loaded and you will be stuck with the default quote. Either play this on itch.io (link here) or run this program on a simple server. I personally used this command: https://www.geeksforgeeks.org/setting-up-a-simple-http-server-using-python/ run from the project directory. 
 
-You can also find it [here]<https://fyshstyx.itch.io/the-positively-minded-calculating-device-of-extreme-power-and-efficency-whose-ac>
+You can also find it here: https://fyshstyx.itch.io/the-positively-minded-calculating-device-of-extreme-power-and-efficency-whose-ac
