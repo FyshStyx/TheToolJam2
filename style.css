@@ -1,0 +1,76 @@
+/* https://nostalgic-css.github.io/NES.css/# */
+
+/* Loads custom font into style sheet */
+@font-face {
+    font-family: kongtext;
+    src: url(./fonts/kongtext.ttf);
+}
+
+
+/* Sets the dimensions of calculator grid */
+.grid-container {
+    display: inline-grid;
+    grid-template-columns: 100px 100px 100px 100px; 
+    grid-template-rows: 120px 100px 100px 100px 100px 100px;
+    gap: 10px;
+    padding: 10px;
+    /* left: 30px;
+    top: 30px; */
+}
+
+/* Properties of each grid square parent */
+.grid-container > div {
+    /* background-color: rgba(255, 255, 255, 0.8); */
+    text-align: center;
+    font-size: 30px;
+}
+
+/* Make the calculator screen strech across top of grid */
+.grid-calculator-screen {
+    background-color: rgba(255, 255, 255, 0.8);
+    grid-column-end: span 4;
+    box-shadow: 8px 8px  rgba(0, 0, 0, 0.2) inset;
+    /* should prevent user from being able to highlight the display text */
+    user-select: none;
+}
+
+#calculator-screen-text {
+    position:absolute;
+    right:0px;
+    bottom:0px;
+    color: black !important;
+    font-size: 45px;
+}
+
+/* Make the + and = button grid cover two squares down */
+.grid-plus, .grid-equals {
+    grid-row-end: span 2;
+}
+
+/* Make the 0 button cover two squares across */
+.grid-zero-key {
+    grid-column-end: span 2;
+}
+
+.clc-btn {
+    width: 90px;
+    height: 90px;
+}
+
+.tll-btn {
+    height: 200px; 
+}
+
+.wd-btn {
+    width: 200px;
+}
+
+/* format name that shows in quote pop-up */
+#quote-end-btn {
+    font-size: 20px !important;
+}
+
+/* format body text that shows in quote pop-up */
+#quote-body {
+    font-size: 15px !important;
+}

@@ -1,0 +1,157 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>The Positively Minded Calculating Device of Extreme Power and Efficency Whose Acronym is Incredibly Easy to Pronounce</title>
+    <link rel="icon" type="image/x-icon" href="./favicon.ico">
+
+    <!-- Import style sheets (mine + nes) -->
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./node_modules/nes.css/css/nes.css">
+    <script src="./calculator.js"></script>
+
+    
+    <style>
+        /* Set font for (i think) all text in page */
+        html, body, pre, code, kbd, samp {
+            font-family: "kongtext";
+        }
+
+        /* Define size of body. I think I need this if I want to define
+        where the calculator sits relative to edge of screen. Currently body
+        occupies 100% of height and width of the current window size. */
+        body {
+            height: 100vh;
+            width: 100vw;
+        }
+      </style>
+</head>
+
+<body>
+    
+    
+    <!-- Calculator "grid" -->
+    <!-- Just learnt you can seperate diff style
+    classes with spaces. Very fancy. -->
+    <!-- Just learnt I probably should use id not class for one off labels -->
+    <div class="grid-container nes-container is-dark">
+        
+        <!-- Screen -->
+        <div class="grid-calculator-screen nes-container">
+            <p id="calculator-screen-text">
+                0
+            </p>
+        </div>
+
+        <!-- AC  Divide / Multiply / Minus -->
+        <div class="grid-ac">
+            <button type="button" class="clc-btn nes-btn is-error" onclick="playSound(); userInput('AC')">
+                AC
+            </button>
+        </div>
+        <div class="grid-divide">
+            <button type="button" class="clc-btn nes-btn" onclick="playSound(); userInput('/')">
+                /
+            </button>
+        </div>
+        <div class="grid-times">
+            <button type="button" class="clc-btn nes-btn" onclick="playSound(); userInput('*')">
+                *
+            </button>
+        </div>
+        <div class="grid-minus" onclick="playSound(); inspirationalQuote();">
+            <!-- this bit is the template for a quote pop-up. It get editied by the js quote function -->
+            <dialog class="nes-dialog" id="dialog-default">
+                <form method="dialog">
+                  <p id="quote-name">SpongeBob says...</p>
+                  <p id="quote-body">Licking doorknobs on other planets is illegal.</p>
+                  <menu class="quote-menu">
+                    <button class="nes-btn" id="quote-end-btn">O.K!</button>
+                  </menu>
+                </form>
+            </dialog>
+
+            <button type="button" class="clc-btn nes-btn is-disabled">
+                -
+            </button>
+        </div>
+
+        <!-- 7 / 8 / 9 / + -->
+        <div class="grid-num-key">
+            <button type="button" class="clc-btn nes-btn" onclick="playSound(); userInput('7')">
+                7
+            </button>
+        </div>
+        <div class="grid-num-key">
+            <button type="button" class="clc-btn nes-btn" onclick="playSound(); userInput('8')">
+                8
+            </button>
+        </div>
+        <div class="grid-num-key">
+            <button type="button" class="clc-btn nes-btn" onclick="playSound(); userInput('9')">
+                9
+            </button>
+        </div>
+        <div class="grid-plus">
+            <button type="button" class="clc-btn tll-btn nes-btn" onclick="playSound(); userInput('+')">
+                +
+            </button>
+        </div>
+
+        <!-- 4 / 5 / 6 / + -->
+
+        <div class="grid-num-key">
+            <button type="button" class="clc-btn nes-btn" onclick="playSound(); userInput('4')">
+                4
+            </button>
+        </div>
+        <div class="grid-num-key">
+            <button type="button" class="clc-btn nes-btn" onclick="playSound(); userInput('5')">
+                5
+            </button>
+        </div>
+        <div class="grid-num-key">
+            <button type="button" class="clc-btn nes-btn" onclick="playSound(); userInput('6')">
+                6
+            </button>
+        </div>
+
+        <!-- 1 / 2 / 3 / = -->
+        <div class="grid-num-key">
+            <button type="button" class="clc-btn nes-btn" onclick="playSound(); userInput('1')">
+                1
+            </button>
+        </div>
+        <div class="grid-num-key">
+            <button type="button" class="clc-btn nes-btn" onclick="playSound(); userInput('2')">
+                2
+            </button>
+        </div>
+        <div class="grid-num-key">
+            <button type="button" class="clc-btn nes-btn" onclick="playSound(); userInput('3')">
+                3
+            </button>
+        </div>
+        <div class="grid-equals">
+            <button type="button" class="clc-btn tll-btn nes-btn is-warning" onclick="playSound(); userInput('=')">
+                =
+            </button>
+        </div>
+
+
+        <!-- 0 / 0 / . / = -->
+        <div class="grid-zero-key">
+            <button type="button" class="clc-btn wd-btn nes-btn" onclick="playSound(); userInput('0')">
+                0
+            </button>
+        </div>
+        <div class="grid-decimal">
+            <button type="button" class="clc-btn nes-btn" onclick="playSound(); userInput('.')">
+                .
+            </button>
+        </div>
+    </div>
+    
+    
+</body>
+
+</html>
